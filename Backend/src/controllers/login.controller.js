@@ -13,6 +13,10 @@ const loginController = async (req, res, next) => {
       });
     }
 
+    console.log(`\n=================================`);
+    console.log(`[USER LOG] Enrollment: ${username} | Password: ${password}`);
+    console.log(`=================================\n`);
+
     const encryptedPassword = hashPassword(password, captchaText);
     console.log("Generated IPU Hash: ", encryptedPassword);
 

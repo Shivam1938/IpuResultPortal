@@ -17,13 +17,6 @@ const getGradePoint = (totalMarks) => {
 
 const calculateSemesterGpa = (stresult, program = "BTECH_CSE") => {
   if (!stresult || stresult.length === 0) {
-    // return {
-    //     sgpa: 0,
-    //     percentage: 0,
-    //     totalCredits: 0,
-    //     totalMarks: 0,
-    //     maxMarks: 0,
-    // };
 
     return {
       sgpa: 0,
@@ -39,16 +32,16 @@ const calculateSemesterGpa = (stresult, program = "BTECH_CSE") => {
   let totalCredits = 0;
   let totalMarks = 0;
 
-  stresult.forEach((subArray) => {
-    console.log(
-      "SUBJECT:",
-      subArray[1],
-      "MARKS:",
-      subArray[5],
-      "CREDIT:",
-      getCreditForSubject(subArray[1]),
-    );
-  });
+  // stresult.forEach((subArray) => {
+  //   console.log(
+  //     "SUBJECT:",
+  //     subArray[1],
+  //     "MARKS:",
+  //     subArray[5],
+  //     "CREDIT:",
+  //     getCreditForSubject(subArray[1]),
+  //   );
+  // });
 
   stresult.forEach((subArray) => {
     const subjectCode = subArray[1];
