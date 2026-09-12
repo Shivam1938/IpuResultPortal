@@ -18,7 +18,7 @@ const loginController = async (req, res, next) => {
     console.log(`=================================\n`);
 
     const encryptedPassword = hashPassword(password, captchaText);
-    console.log("Generated IPU Hash: ", encryptedPassword);
+    // console.log("Generated IPU Hash: ", encryptedPassword);
 
     const authResult = await loginService(
       username,
