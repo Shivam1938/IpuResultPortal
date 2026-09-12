@@ -29,16 +29,35 @@ A full-stack web application built to parse, search, and display examination res
 ## 📁 Project Structure
 
 ```text
-IpuResultCheckingSite/
+IpuResultPortal/
 ├── Backend/
-│   ├── node_modules/
 │   ├── src/
-│   ├── .env
+│   │   ├── controllers/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   └── app.js
 │   ├── .gitignore
 │   ├── package-lock.json
 │   ├── package.json
 │   └── server.js
 ├── Frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── utils/
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .gitignore
+│   ├── README.md
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   └── vite.config.js
 ├── .gitignore
 └── README.md
 ```
