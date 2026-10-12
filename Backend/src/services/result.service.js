@@ -20,16 +20,34 @@ const fetchScrapedResult = async (authCookie, semester) => {
         },
       });
 
-      if (
-        response.data &&
-        response.data.stresult &&
-        response.data.stresult.length > 0
-      ) {
+      // if (
+      //   response.data &&
+      //   response.data.stresult &&
+      //   response.data.stresult.length > 0
+      // ) {
+      //   return {
+      //     semester: semNumber,
+      //     stprofile: response.data.stprofile,
+      //     header: response.data.header,
+      //     stresult: response.data.stresult,
+      //   };
+      // }
+      // return null;
+            const body = response.data;
+      if (!body || body.status !== "OK" || !body.message) return null;
+
+      // IPU ab result ko string ke andar JSON bana ke bhejta hai
+      const parsed =
+        typeof body.message === "string"
+          ? JSON.parse(body.message)
+          : body.message;
+
+      if (parsed.stresult && parsed.stresult.length > 0) {
         return {
           semester: semNumber,
-          stprofile: response.data.stprofile,
-          header: response.data.header,
-          stresult: response.data.stresult,
+          stprofile: parsed.stprofile,
+          header: parsed.header,
+          stresult: parsed.stresult,
         };
       }
       return null;
