@@ -9,7 +9,8 @@ import axios from "axios";
 const fetchScrapedResult = async (authCookie, semester) => {
   const fetchSingleSem = async (semNumber) => {
     try {
-      const targetUrl = `https://examweb.ggsipu.ac.in/web/StudentSearchProcess?flag=2&euno=${semNumber}`;
+      // const targetUrl = `https://examweb.ggsipu.ac.in/web/StudentSearchProcess?flag=2&euno=${semNumber}`;
+      const targetUrl = `https://examweb.ggsipu.ac.in/web/student/search?flag=2&euno=${semNumber}`;
       const response = await axios.get(targetUrl, {
         headers: {
           Cookie: authCookie,
