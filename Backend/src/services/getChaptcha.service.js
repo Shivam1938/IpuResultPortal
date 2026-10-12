@@ -3,8 +3,8 @@ import axios from "axios";
 const getChaptchaService = async () => {
   try {
     const ipuUrl =
-      process.env.IPUCAPTCHASERVELET ||
-      "https://examweb.ggsipu.ac.in/web/CaptchaServlet";
+      process.env.IPUCAPTCHASERVELET || "https://examweb.ggsipu.ac.in/web/captcha";
+      //"https://examweb.ggsipu.ac.in/web/CaptchaServlet";
 
     const response = await axios.get(ipuUrl, {
       responseType: "arraybuffer",
