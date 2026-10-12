@@ -8,7 +8,8 @@ const loginService = async (
   jSessionId,
 ) => {
   try {
-    const loginUrl = "https://examweb.ggsipu.ac.in/web/Login";
+    // const loginUrl = "https://examweb.ggsipu.ac.in/web/Login";
+    const loginUrl = "https://examweb.ggsipu.ac.in/web/login";
 
     const formData = qs.stringify({
       username: username,
